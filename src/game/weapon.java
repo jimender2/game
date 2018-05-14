@@ -1,7 +1,12 @@
+package game;
+
+import java.util.Random;
+
 public class weapon {
 	private int durability;
 	private int strength;
 	private int level;
+	private int damage;
 
 	public weapon() {
 		 durability = 100;
@@ -9,7 +14,7 @@ public class weapon {
 		 
 	 }	
 
-	public weapon(int lev, int ag) {
+	public weapon(int lev) {
 		level = lev;
 		if (level == 1) {
 			durability = 10;
@@ -17,19 +22,28 @@ public class weapon {
 			durability = 20;
 		}
 		
-		strength = ag;
-		if (strength == 0) {
-			strength = 1;
-		}
-		
-		durability = 10;
 	}
 	
-	public void damage(int num){
+	public void durability(int num){
 		durability = durability - num;
 		if (durability <= 0) {
 			durability = 0;
 		}
+	}
+	
+	public int useWeapon() {
+		if (durability == 0) {
+			damage = 0;
+			return damage;
+		}
+		durability = durability - 1;
+		Random rand = new Random();
+		damage = ((level + strength) * rand.nextInt(10));
+		if (durability == 0) {
+			level = 0;
+			strength = 0;
+		}
+		return damage;
 	}
 	
 	public int getDurability() {

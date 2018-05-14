@@ -12,17 +12,12 @@ public class monster {
 		 
 	 }	
 
-	public monster(int lev, int ag) {
+	public monster(int lev) {
 		level = lev;
 		if (level == 1) {
 			health = 10;
 		} else if (level == 2) {
 			health = 20;
-		}
-		
-		age = ag;
-		if (age == 0) {
-			age = 1;
 		}
 		
 		armor = 10;
