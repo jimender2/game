@@ -17,6 +17,10 @@ public class game {
 	}
 	
 	public static void levelOne() {
+		monster monster1 = new monster(1);
+		weapon weapon1 = new weapon(1);
+		utils utils = new utils();
+		
 		
 	}
 }
