@@ -1,0 +1,5 @@
+monster
+  add color
+  add sex
+  add claws
+  add fangs
