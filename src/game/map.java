@@ -13,4 +13,8 @@ public class map {
 			i++;
 		}
 	}
+	
+	public int displayMap(){
+		
+	}
 }
