@@ -15,6 +15,11 @@ public class map {
 	}
 	
 	public int displayMap(){
-		
+		int i = 0;
+		int u = 0;
+		while (i<=4) {
+			System.out.println(map[u])
+			u = u + 1;
+		}
 	}
 }
